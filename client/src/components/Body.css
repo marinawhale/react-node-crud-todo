@@ -1,0 +1,22 @@
+:root {
+    --header-height: 80px;
+    --sidebar-width: 280px;
+    --gap: 2rem;
+}
+
+.body {
+    background-color: white;
+    color: black;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.12);
+    border-radius: 20px;
+    
+    position: fixed;
+    
+    top: calc(var(--header-height) + var(--gap));
+    left: calc(var(--sidebar-width) + var(--gap));
+    right: var(--gap);
+    bottom: 0;
+
+    padding: 3rem;
+    overflow-y: auto;
+}

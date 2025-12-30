@@ -1,0 +1,58 @@
+.quick-tasks-container h2 {
+    color: #5A7863;
+    margin-bottom: 1.5rem;
+}
+
+.quick-task-input-area {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.quick-task-input-area input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+}
+
+.quick-task-input-area button {
+    background-color: #5A7863;
+    color: white;
+    border: none;
+    padding: 0 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.quick-task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #f9f9f9;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    transition: all 0.2s;
+}
+
+.quick-task-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    flex: 1;
+}
+
+.quick-task-item.completed {
+    opacity: 0.6;
+}
+
+.quick-task-item.completed span {
+    text-decoration: line-through;
+}
+
+.icon-check { color: #5A7863; }
+.btn-delete { color: #ff6b6b; background: none; border: none; cursor: pointer; }

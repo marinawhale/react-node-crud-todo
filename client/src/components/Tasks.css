@@ -1,0 +1,228 @@
+/* Container Principal */
+.tasks-body {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tasks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.tasks-header h2 {
+    color: #5A7863;
+    margin: 0;
+}
+
+.add-task-btn {
+    background-color: #5A7863;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.add-task-btn:hover {
+    opacity: 0.9;
+}
+
+.detailed-form {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    border: 1px solid #eee;
+}
+
+.detailed-form h3 {
+    color: #5A7863;
+    margin-top: 0;
+}
+
+.detailed-form input, 
+.detailed-form textarea, 
+.detailed-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    outline: none;
+    font-family: inherit;
+}
+
+.detailed-form input:focus {
+    border-color: #5A7863;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.save-btn {
+    background-color: #5A7863;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.task-card {
+    position: relative;
+    background: #f9f9f9;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.task-card.completed {
+    opacity: 0.7;
+}
+
+.text-strikethrough {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-card.completed img {
+    opacity: 0.7;
+    background: #ebebeb;
+    filter: grayscale(1);
+}
+
+.check-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 5;
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+}
+
+.check-btn:hover {
+    transform: scale(1.1);
+    background: white;
+}
+
+.icon-check {
+    color: #5A7863;
+}
+
+.icon-uncheck {
+    color: #bbb;
+}
+
+.task-card.priority-high { 
+    border-top: 5px solid #ff4d4d;
+}
+
+.task-card.priority-normal { 
+    border-top: 5px solid #4da3ff;
+}
+
+.task-card.priority-low { 
+    border-top: 5px solid #2ecc71;
+}
+
+.task-img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+.task-content {
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-content h3 {
+    margin: 0;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+.task-content p {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.deadline-tag {
+    font-size: 0.8rem;
+    color: #5A7863;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.task-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.btn-edit {
+    background: none;
+    border: none;
+    color: #5A7863;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.btn-delete-task {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+@keyframes highlight-pulse {
+    0% { box-shadow: 0 0 0 0px rgba(90, 120, 99, 0.7); }
+    50% { box-shadow: 0 0 0 7px rgba(90, 120, 99, 0.4); }
+    100% { box-shadow: 0 0 0 0px rgba(90, 120, 99, 0); }
+}
+
+.highlight-task {
+    animation: highlight-pulse 1.5s ease-out;
+}
