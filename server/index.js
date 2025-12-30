@@ -28,7 +28,6 @@ const writeData = (data) => {
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
 };
 
-// --- ROTAS TASKS DETALHADAS (/tasks) ---
 app.get('/tasks', (req, res) => {
     const data = readData();
     res.json(data.tasks);
@@ -69,7 +68,6 @@ app.put('/tasks/:id', (req, res) => {
     }
 });
 
-// --- ROTAS QUICK TASKS (/quick-tasks) ---
 app.get('/quick-tasks', (req, res) => {
     const data = readData();
     res.json(data.quickTasks);
@@ -84,7 +82,6 @@ app.post('/quick-tasks', (req, res) => {
     res.status(201).json(newTask);
 });
 
-// ADICIONADO: Rota para Deletar Quick Task
 app.delete('/quick-tasks/:id', (req, res) => {
     const { id } = req.params;
     let data = readData();
@@ -93,7 +90,6 @@ app.delete('/quick-tasks/:id', (req, res) => {
     res.status(204).send();
 });
 
-// ADICIONADO: Rota para Atualizar Quick Task (Check/Uncheck)
 app.put('/quick-tasks/:id', (req, res) => {
     const { id } = req.params;
     const { text, completed } = req.body;
